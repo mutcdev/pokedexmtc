@@ -9,10 +9,12 @@
 
     <!-- Main JS -->
     <script defer src="./js/script.js"></script>
+    <link rel="icon" type="image/png" href="./faviconmtc.png">
 
     <title>Pokédex</title>
 </head>
 <body>
+    <link rel="icon" href="./faviconmtc.png">
     <main>
         <img src="#" class="pokemon_image">
         <h1 class="pokemon_data">
@@ -33,6 +35,9 @@
             <button class="button btn_next">Next &gt;</button>
         </div>
 
+        <button class="btn_favorite" title="Favorite this Pokémon" ><span class="star">☆</span></button>
+        <button class="btn_viewFav" ><span class="fav_text">View Favorites</span></button>
+
         <div class="pokemons_datas">
             <p>
                 Type: 
@@ -50,6 +55,32 @@
                 Ablities: 
                 <span class="pokemon_ablities"></span>
             </p>
+            <div class="stats">
+                <div class="stat">
+                    <span>HP</span>
+                        <div class="bar"><div class="fill hp"></div></div>
+                </div>
+                <div class="stat">
+                    <span>ATK</span>
+                        <div class="bar"><div class="fill attack"></div></div>
+                </div>
+                 <div class="stat">
+                    <span>DEF</span>
+                        <div class="bar"><div class="fill defense"></div></div>
+                </div>
+                <div class="stat">
+                    <span>SPA</span>
+                        <div class="bar"><div class="fill spAttack"></div></div>
+                </div>
+                <div class="stat">
+                    <span>SPD</span>
+                        <div class="bar"><div class="fill spDefense"></div></div>
+                </div>
+                <div class="stat">
+                    <span>SPE</span>
+                        <div class="bar"><div class="fill speed"></div></div>
+                </div>
+            </div>
         </div>
 
         <img src="pokedex.png" class="pokedex">

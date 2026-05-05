@@ -8,14 +8,17 @@
 }
 
 body {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     min-height: 100vh;
     background-color: rgb(17, 9, 36);
 }
 
 main {
     display: inline-block;
-    margin-top: 6%;
+    
     padding: 18px;
     position: relative;
 }
@@ -53,6 +56,7 @@ main {
     position: absolute;
     width: 42%;
     top: 66%;
+    right: 51%;
 }
 
 .input_search{
@@ -95,14 +99,119 @@ main {
 }
 
 .pokemons_datas{
+    width: 30%;
+    max-width: 200px;
     position: absolute;
     font-weight: 600;
-    top: 35%;
-    left: 63%;
-    font-size: clamp(1px, 3vw, 13px);
+    top: 33.5%;
+    left: 60%;
+    font-size: clamp(7px, 2vw, 13px);
     text-align: left;
     display:flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 3px;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btn_favorite {
+    position: absolute;
+    right: 31.5%;
+    top: 25%;
+    padding: 0.4%;
+    background-color: #f6fa12;
+    color: black;
+    font-size: clamp(5px, 2vw, 1.2rem);
+    border-radius: 5px;
+    width: 9%;
+    font-weight: 600;
+    border: 2px solid #000;
+    box-shadow: -2px 2px 0 #8b7703, -3px 3px 0 #302900;
+}
+
+.btn_favorite:active{
+    box-shadow: inset -4px 4px 0 #a59504;
+    
+}
+
+.star{
+     display: inline-block;
+    transition: transform 0.1s ease;
+}
+
+.btn_favorite:active .star{
+    transform: scale(0.7);
+}
+
+.btn_favorite.active {
+    background-color:rebeccapurple;
+    color:white;
+    box-shadow: -2px 2px 0 #320352, -3px 3px 0 #302900;
+
+}
+
+.btn_favorite.active:active{
+    box-shadow: inset -4px 4px 0 #320352;
+}
+
+.btn_viewFav {
+    position: absolute;
+    padding: 1%;
+    top: 25%;
+    right: 10%;
+    background-color: #444;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid #000;
+    box-shadow: -2px 2px 0 #222, -3px 3px 0 #000;
+    font-size: clamp(1px, 2vw, 1rem);
+    transform: translate(1%, 0);
+}
+
+.btn_viewFav:active{
+    box-shadow: inset -4px 4px 0 #222;
+}
+
+.fav_text {
+    display: inline-block;
+    transition: transform 0.1s ease;
+}
+
+.btn_viewFav:active .fav_text {
+    transform: scale(0.7);
+}
+
+.bar{
+    width: 100%;
+    max-width: 150px;
+    height: 10px;
+    background: #ddd;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: clamp(0.1px, 3vw, 13px);
+}
+
+.fill {
+    height: 100%;
+    width: 0%;
+    background: rgb(7, 228, 198);
+    transition: 0.3s;
+}
+
+p{
+    color:#333
+}
+
+.pokemon_type{
+    color:black
+}
+.pokemon_height{
+    color:black
+}
+.pokemon_weight{
+    color:black
+}
+.pokemon_ablities{
+    color:black
 }
